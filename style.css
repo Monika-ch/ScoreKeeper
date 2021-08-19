@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Roboto',
+  sans-serif;
+  /* word-spacing: 1px; */
+}
+
+#container {
+  border: 1px solid #eee;
+}
+
+#head-body {
+  border: 1px solid #eee;
+}
+
+#head-body img {
+  width: 450px;
+}
+
+#head-body h5,
+#score-body {
+  padding: 0 10px;
+  margin: 10px 5px;
+}
+
+#score-body h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+#score-body p {
+  margin-top: 5px;
+}
+
+#score-body .p1Display {
+  color: #f85656;
+}
+
+#score-body .p2Display {
+  color: #30ad79;
+}
+
+#score-body select {
+  text-align: center;
+  border: 1px solid #ccc;
+  background:#fff;
+  padding: 2px 7px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#group-buttons {
+  display: flex;
+}
+
+#group-buttons button {
+  flex: 1 auto;
+  cursor: pointer;
+  padding: 9px;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+#group-buttons #p1Btn {
+  background: #30ad79;
+}
+
+#group-buttons #p2Btn {
+  background: #297abd;
+}
+
+#group-buttons #reset {
+  background: #f85656;
+}
