@@ -5,7 +5,7 @@ body {
   justify-content: center;
   margin: 0;
   font-family: 'Roboto',
-  sans-serif;
+    sans-serif;
   /* word-spacing: 1px; */
 }
 
@@ -36,18 +36,18 @@ body {
   margin-top: 5px;
 }
 
-#score-body .p1Display {
+/* #score-body #p1Display {
   color: #f85656;
 }
 
-#score-body .p2Display {
+#score-body #p2Display {
   color: #30ad79;
-}
+} */
 
 #score-body select {
   text-align: center;
   border: 1px solid #ccc;
-  background:#fff;
+  background: #fff;
   padding: 2px 7px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -81,6 +81,14 @@ body {
   background: #297abd;
 }
 
-#group-buttons #reset {
+#group-buttons #resetBtn {
   background: #f85656;
+}
+
+.winner {
+  color: #30ad79;
+}
+
+.loser {
+  color: #f85656;
 }
