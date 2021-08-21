@@ -60,13 +60,16 @@
 // CODE REFACTORING..
 const resetBtn = document.querySelector("#resetBtn");
 const winningScoreSelect = document.querySelector("#playTo");
+const content = document.querySelector(".content");
 const p1 = {
   score: 0,
+  name: "Player 1",
   button: document.querySelector("#p1Btn"),
   display: document.querySelector("#p1Display"),
 };
 const p2 = {
   score: 0,
+  name: "Player 2",
   button: document.querySelector("#p2Btn"),
   display: document.querySelector("#p2Display"),
 };
@@ -82,7 +85,12 @@ function updateScores(player, opponent) {
       player.display.classList.add("has-text-success");
       opponent.display.classList.add("has-text-danger");
       player.button.disabled = true;
-      opponent.button.disabled = true;     
+      opponent.button.disabled = true;
+
+      let winningTextElement = document.createElement("h1");
+      winningTextElement.classList.add("winningText", "has-text-success");
+      winningTextElement.textContent = (`${player.name} Wins !`).toUpperCase();
+      content.append(winningTextElement);
     }
     player.display.textContent = player.score;
   }
@@ -117,6 +125,10 @@ resetBtn.addEventListener("click", reset);
 
 // looping over the players to avoid code-repetition; good to have in case of multiple players
 function reset() {
+  let winningText = document.querySelector(".winningText");
+  if (winningText != null) {
+    winningText.remove();
+  }
   isGameOver = false;
   for (let p of [p1, p2]) {
     p.score = 0;
